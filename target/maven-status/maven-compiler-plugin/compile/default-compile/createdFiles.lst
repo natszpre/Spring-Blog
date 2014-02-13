@@ -1,0 +1,4 @@
+org\springframework\blog\dao\DaoPost.class
+org\springframework\blog\dao\Post.class
+org\springframework\blog\controller\ViewPosts.class
+org\springframework\blog\controller\AddNewPost.class
