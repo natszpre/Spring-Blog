@@ -11,6 +11,7 @@
 
 <a href="<c:url value="/j_spring_security_logout" />" > <spring:message code="label.logout" /></a>
 <a href = "/spring-blog/viewcomments/viewunpublishedcomments"> <spring:message code="label.unpublishedcomments" /> </a>
+<a href = "/spring-blog/unpublishedposts"> <spring:message code="label.unpublishedposts" /> </a>
 
 <c:forEach items="${posts}" var="post">
     <tr>      

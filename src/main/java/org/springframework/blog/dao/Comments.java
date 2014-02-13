@@ -13,11 +13,20 @@ public class Comments {
 	@GeneratedValue
 	private Integer id;
 	
-	String username, email, content;
+	String username, email, content, language;
 	
 	int enabled, post_id;
 	
 	
+	
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
 	public int getPost_id() {
 		return post_id;
 	}

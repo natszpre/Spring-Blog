@@ -2,6 +2,7 @@ package org.springframework.blog.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 @Controller
 public class ViewPosts {
@@ -142,7 +144,8 @@ public class ViewPosts {
 		
 		String content = request.getParameter("content");
 		String email = request.getParameter("email");
-
+		
+		
 		Comments comments = new Comments();
 		User user = null;
 
@@ -151,6 +154,7 @@ public class ViewPosts {
 			comments.setEmail(email);
 			comments.setEnabled(0);
 			comments.setPost_id(id);
+			comments.setLanguage(RequestContextUtils.getLocale(request).toString());
 			try {
 				user = (User) SecurityContextHolder.getContext()
 						.getAuthentication().getPrincipal();

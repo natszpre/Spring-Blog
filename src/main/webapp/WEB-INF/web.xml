@@ -18,6 +18,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <param-value>
         	classpath:spring/business-config.xml,
         	classpath:spring/spring-security.xml
+        	classpath:spring/spring-mail.xml
         </param-value>
     </context-param>
 

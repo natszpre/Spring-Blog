@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,5 +40,21 @@ public class DaoComments {
 				"UPDATE Comments comments SET enabled=1 WHERE id=:id")
 				.setParameter("id", id)
 				.executeUpdate();  
+	}
+	
+	@Transactional
+	public String getMail(int id) {
+		return entityManager.createQuery("SELECT email FROM Comments comments WHERE comments.id=:id")
+				.setParameter("id", id)
+				.getSingleResult()
+				.toString();
+	}
+	
+	@Transactional
+	public String getLanguage(int id) {
+		return entityManager.createQuery("SELECT language FROM Comments comments WHERE comments.id=:id")
+				.setParameter("id", id)
+				.getSingleResult()
+				.toString();
 	}
 }
