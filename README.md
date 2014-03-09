@@ -8,9 +8,9 @@ Spring-blog is a tool for adding, editing and comment new blog posts.
 ### Admin Panel
 
 1. Functionality
-⋅⋅* Add and delete posts.
-⋅⋅* Approve posts of other users.
-⋅⋅* Approve comments.
+..* Add and delete posts.
+..* Approve posts of other users.
+..* Approve comments.
 
 2. How to open admin panel.
 Currently the only possibility to access admin panel is to create a user in database with TYPE=admin field. After that, you can log in to aplication with proper credentials.
